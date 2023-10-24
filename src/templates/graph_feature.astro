@@ -1,5 +1,6 @@
 ---
 import BaseSection from "../layouts/base_section.astro";
+import { ChallanGraphView } from "../previews/challan_graph_view";
 
 const features = [
   {
@@ -30,8 +31,11 @@ const features = [
 <BaseSection
   class="flex flex-col-reverse lg:flex-row items-center justify-center gap-y-12 gap-x-8 bg-[#FEFEFE]"
 >
-  <div class="w-full lg:w-1/2">
-    <img src="/src/assets/graph_view.png" class="w-full h-full aspect-auto" />
+  <div class="hidden sm:block w-full h-[90vh] lg:w-1/2">
+    <ChallanGraphView client:media="(min-width: 640px)" />
+  </div>
+  <div class="block sm:hidden w-full lg:w-1/2">
+    <img src="/src/assets/graph_view.png" />
   </div>
   <div class="w-full lg:w-1/2">
     <div

@@ -63,7 +63,7 @@ export default function Features() {
         <p className="xl:hidden block px-2 text-sm sm:text-base text-white text-center max-w-md">
           {cards[active].description}
         </p>
-        <div className="xl:w-[60%] rounded-xl xl:rounded-r-none bg-white p-2">
+        <div className="xl:w-[60%] rounded-xl xl:rounded-r-none bg-white p-5">
           <StockPage />
         </div>
       </div>

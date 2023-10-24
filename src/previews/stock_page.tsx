@@ -9,7 +9,7 @@ import { ChallanExpectationTable } from "./components/challan/challan_expectatio
 export const StockPage = () => {
   const category = new StockCategory("JOBWORK");
   return (
-    <div className="h-screen p-8 space-y-6">
+    <div className="h-[90vh] space-y-6">
       <div className="flex-between">
         <h1 className="sm:text-3xl text-xl font-semibold tracking-tight">
           Jobwork Stocks

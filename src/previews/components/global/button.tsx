@@ -1,6 +1,6 @@
 "use client";
 
-import { CSSProperties, forwardRef } from "react";
+import { type CSSProperties, forwardRef } from "react";
 import * as Tooltip from "@radix-ui/react-tooltip";
 
 const variantStyle = {

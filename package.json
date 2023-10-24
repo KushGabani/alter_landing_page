@@ -4,6 +4,7 @@
   "dependencies": {
     "@astrojs/react": "^3.0.3",
     "@astrojs/tailwind": "^5.0.2",
+    "@dagrejs/dagre": "^1.0.4",
     "@fontsource-variable/inter-tight": "^5.0.16",
     "@heroicons/react": "^2.0.18",
     "@radix-ui/react-checkbox": "^1.0.4",
@@ -20,6 +21,7 @@
     "react-dom": "^18.0.0",
     "react-hook-form": "^7.47.0",
     "react-infinite-scroll-component": "^6.1.0",
+    "reactflow": "^11.9.4",
     "tailwindcss-animate": "^1.0.7"
   },
   "scripts": {
