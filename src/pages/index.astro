@@ -1,16 +1,19 @@
 ---
-
+import BaseLayout from "../layouts/base_layout.astro";
+import Features from "../templates/features";
+import GraphFeature from "../templates/graph_feature.astro";
+import Hero from "../templates/hero.astro";
+import { StockPage } from "../previews/stock_page";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+  <main class="w-full">
+    <!-- <Navbar /> -->
+    <Hero />
+    <Features client:idle />
+    <GraphFeature />
+    <div class="relative h-screen">
+      <StockPage client:load />
+    </div>
+  </main>
+</BaseLayout>

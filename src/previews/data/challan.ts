@@ -1,0 +1,68 @@
+import { ChallanListModel } from "../models";
+import { JobStatus, StockCategory } from "../models/types";
+import { clients } from "./clients";
+import { designs } from "./design";
+import { stocktypes } from "./stocktype";
+
+export const challans = [
+  new ChallanListModel({
+    id: 1,
+    type: stocktypes[0],
+    category: new StockCategory("JOBWORK"),
+    challanNo: "J-11.1.1",
+    client: clients[0],
+    designs: designs.slice(0, 2),
+    issueDate: new Date(),
+    dueDate: new Date(),
+    isSubChallan: false,
+    jobStatus: new JobStatus("IN_PROCESS"),
+    mainChallanIds: [],
+    parentChallanIds: [],
+    lot: "A",
+  }),
+  new ChallanListModel({
+    id: 2,
+    type: stocktypes[0],
+    category: new StockCategory("JOBWORK"),
+    challanNo: "J-11.1.2",
+    client: clients[1],
+    designs: designs.slice(0, 2),
+    issueDate: new Date(),
+    dueDate: new Date(),
+    isSubChallan: false,
+    jobStatus: new JobStatus("IN_PROCESS"),
+    mainChallanIds: [],
+    parentChallanIds: [],
+    lot: "A",
+  }),
+  new ChallanListModel({
+    id: 3,
+    type: stocktypes[1],
+    category: new StockCategory("JOBWORK"),
+    challanNo: "J-12.1",
+    client: clients[3],
+    designs: [designs[3]],
+    issueDate: new Date(),
+    dueDate: new Date(),
+    isSubChallan: false,
+    jobStatus: new JobStatus("IN_PROCESS"),
+    mainChallanIds: [],
+    parentChallanIds: [],
+    lot: "A",
+  }),
+  new ChallanListModel({
+    id: 4,
+    type: stocktypes[1],
+    category: new StockCategory("JOBWORK"),
+    challanNo: "J-13",
+    client: clients[3],
+    designs: [designs[5]],
+    issueDate: new Date(),
+    dueDate: new Date(),
+    isSubChallan: false,
+    jobStatus: new JobStatus("IN_PROCESS"),
+    mainChallanIds: [],
+    parentChallanIds: [],
+    lot: "A",
+  }),
+];

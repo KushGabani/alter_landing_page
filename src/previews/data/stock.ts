@@ -1,0 +1,73 @@
+import { StockModel } from "../models";
+import { designs } from "./design";
+
+export const stocks = [
+  new StockModel({
+    id: 1,
+    name: "Red Kali",
+    design: designs[0],
+    unit: "KALI",
+    serialCount: 2,
+    serialQty: 105,
+    hsn: "909112",
+  }),
+  new StockModel({
+    id: 2,
+    name: "Maroon Kali",
+    design: designs[0],
+    unit: "KALI",
+    serialCount: 1,
+    serialQty: 50,
+    hsn: "909112",
+  }),
+  new StockModel({
+    id: 3,
+    name: "Lime Kali",
+    design: designs[0],
+    unit: "KALI",
+    serialCount: 1,
+    serialQty: 25,
+    hsn: "909112",
+  }),
+  new StockModel({
+    id: 4,
+    name: "Rani Lehenga",
+    design: designs[3],
+    unit: "PCS",
+    serialCount: 3,
+    serialQty: 30,
+    hsn: "909111",
+  }),
+  new StockModel({
+    id: 5,
+    name: "B101",
+    unit: "M",
+    serialCount: 1,
+    serialQty: 500,
+    hsn: "909990",
+  }),
+  new StockModel({
+    id: 6,
+    name: "B102",
+    unit: "M",
+    serialCount: 1,
+    serialQty: 500,
+    hsn: "909990",
+  }),
+  new StockModel({
+    id: 7,
+    name: "35mm Moti",
+    unit: "KG",
+    serialCount: 2,
+    serialQty: 15,
+    hsn: "909991",
+  }),
+  new StockModel({
+    id: 8,
+    name: "10mm Moti",
+    unit: "KG",
+    serialCount: 1,
+    serialQty: 2,
+    hsn: "909991",
+  }),
+];

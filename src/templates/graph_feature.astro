@@ -1,0 +1,66 @@
+---
+import BaseSection from "../layouts/base_section.astro";
+
+const features = [
+  {
+    icon: "/src/assets/graph_1.svg",
+    title: "Refined production clarity",
+    subtitle:
+      "Gain comprehensive understanding of all your processes with our visualizations.",
+  },
+  {
+    icon: "/src/assets/graph_2.svg",
+    title: "Instant challan insights",
+    subtitle:
+      "Hover on challans to get quick insights like received and issued items",
+  },
+  {
+    icon: "/src/assets/graph_3.svg",
+    title: "Effortless Exploration",
+    subtitle: "Seamlessly move through production stages with a simple click.",
+  },
+  {
+    icon: "/src/assets/graph_4.svg",
+    title: "Move processes ahead in the flow",
+    subtitle: "Create a new challan using the graph to auto-fill forms.",
+  },
+];
+---
+
+<BaseSection
+  class="flex flex-col-reverse lg:flex-row items-center justify-center gap-y-12 gap-x-8 bg-[#FEFEFE]"
+>
+  <div class="w-full lg:w-1/2">
+    <img src="/src/assets/graph_view.png" class="w-full h-full aspect-auto" />
+  </div>
+  <div class="w-full lg:w-1/2">
+    <div
+      class="flex flex-col items-center lg:items-start gap-y-5 text-center lg:text-left"
+    >
+      <h2 class="text-2xl sm:text-4xl md:text-5xl tracking-tight">
+        Bird's-eye view of your manufacturing
+      </h2>
+      <p
+        class="max-w-xs sm:max-w-none lg:max-w-xs text-sm md:text-base text-slate-500"
+      >
+        An interactive graph view to visualize your processes and gain quick
+        insights.
+      </p>
+    </div>
+    <div class="mt-10 p-4 sm:mt-20 grid sm:grid-cols-2 gap-5">
+      {
+        features.map((feature) => (
+          <div class="flex items-start gap-5 max-w-md">
+            <img src={feature.icon} class="w-8 h-8" />
+            <div>
+              <h6 class="text-sm md:text-base text-black">{feature.title}</h6>
+              <p class="mt-2 text-xs md:text-sm text-slate-500">
+                {feature.subtitle}
+              </p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</BaseSection>

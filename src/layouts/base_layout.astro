@@ -1,0 +1,20 @@
+---
+import "@fontsource-variable/inter-tight";
+import BaseHead from "./base_head.astro";
+import "../styles/global.css";
+---
+
+<html
+  lang="en"
+  class="no-touchevents hydrated scroll-smooth bg-white selection:bg-accent-text-overlay selection:text-accent"
+>
+  <head>
+    <BaseHead />
+  </head>
+
+  <body
+    class="flex font-sans w-full flex-col items-center justify-center overflow-x-hidden bg-white text-dark"
+  >
+    <slot />
+  </body>
+</html>
