@@ -204,7 +204,7 @@ export const ChallanExpectationTable = ({ className, category }: Props) => {
         table={pendingIssue}
         customHeading={
           <h2 className="text-lg font-medium pl-8 pt-4 pb-2">
-            Jobwork Stocks To Issue
+            Jobwork Stocks To Receive
           </h2>
         }
         cellClassName="px-8"

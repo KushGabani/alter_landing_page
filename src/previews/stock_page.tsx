@@ -20,17 +20,7 @@ export const StockPage = () => {
           icon={<PlusIcon width={"18px"} height={"18px"} color="white" />}
         />
       </div>
-      <div className="flex flex-col xl:flex-row gap-x-4 gap-y-4">
-        {category.key === "JOBWORK" && (
-          <ChallanIssueTable category={category} className="w-full xl:w-1/2" />
-        )}
-        <ChallanExpectationTable
-          category={category}
-          className={`${
-            category.key === "JOBWORK" ? "xl:w-1/2 w-full" : "w-full"
-          }`}
-        />
-      </div>
+      <ChallanExpectationTable category={category} />
       <ViewStockTable category={category} />
     </div>
   );
