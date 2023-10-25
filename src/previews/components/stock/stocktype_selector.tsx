@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useState } from "react";
 import { Tag, BasePopoverSelector } from "../global";
 import { StocktypeModel } from "../../models";

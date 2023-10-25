@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { type FieldValues, type Path, FormProvider } from "react-hook-form";

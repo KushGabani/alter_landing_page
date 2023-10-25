@@ -1,5 +1,3 @@
-"use client";
-
 import { type CSSProperties, forwardRef } from "react";
 import * as Tooltip from "@radix-ui/react-tooltip";
 

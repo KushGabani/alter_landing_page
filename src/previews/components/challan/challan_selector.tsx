@@ -1,5 +1,3 @@
-"use client";
-
 import { Tag, BasePopoverSelector } from "../global";
 import { DocumentTextIcon } from "@heroicons/react/24/outline";
 import { ChallanListModel } from "../../models";

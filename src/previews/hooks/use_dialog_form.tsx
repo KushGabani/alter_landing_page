@@ -1,5 +1,3 @@
-"use client";
-
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { useForm, type FieldValues, type DefaultValues } from "react-hook-form";
 

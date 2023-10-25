@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import * as Popover from "@radix-ui/react-popover";
 import * as Checkbox from "@radix-ui/react-checkbox";

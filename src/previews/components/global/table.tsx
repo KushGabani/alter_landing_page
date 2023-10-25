@@ -1,9 +1,5 @@
-"use client";
-
 import React from "react";
 import { type Table, flexRender } from "@tanstack/react-table";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
-import { Button } from "./button";
 
 type TableProps<T> = {
   table: Table<T>;

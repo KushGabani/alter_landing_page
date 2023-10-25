@@ -1,5 +1,3 @@
-"use client";
-
 import { BasePopoverSelector, Tag } from "../global";
 import { UserCircleIcon } from "@heroicons/react/24/outline";
 import { ClientModel } from "../../models";

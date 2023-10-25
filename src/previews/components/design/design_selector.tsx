@@ -1,5 +1,3 @@
-"use client";
-
 import { Tag, BasePopoverSelector } from "../global";
 import { PaintBrushIcon } from "@heroicons/react/24/outline";
 import { DesignModel } from "../../models";

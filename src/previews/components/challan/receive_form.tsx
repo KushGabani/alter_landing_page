@@ -1,5 +1,3 @@
-"use client";
-
 import moment from "moment";
 import { DialogFormProvider } from "../../hooks/use_dialog_form";
 import { ChallanListModel, CreateChallanInspectModel } from "../../models";

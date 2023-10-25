@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect } from "react";
 import { type FieldValues, FormProvider, type Path } from "react-hook-form";
 import { Button } from "../global";

@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useState, useEffect, useRef } from "react";
 import * as Checkbox from "@radix-ui/react-checkbox";
 import { Loading } from "../global";

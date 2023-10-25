@@ -1,5 +1,3 @@
-"use client";
-
 import { ChallanListModel } from "./models";
 import ReactFlow, {
   Background,
@@ -114,6 +112,8 @@ const ChallanGraph = ({ challans }: { challans: ChallanListModel[] }) => {
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
         fitView
+        zoomOnPinch
+        panOnScroll
         proOptions={{ hideAttribution: true }}
       >
         <Controls />
