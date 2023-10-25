@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+import alter_home from "../assets/alter_home.png";
 import BaseSection from "../layouts/base_section.astro";
 ---
 
@@ -75,8 +77,9 @@ import BaseSection from "../layouts/base_section.astro";
   <div
     class="max-w-6xl h-full mx-4 sm:p-2 rounded-t-lg sm:rounded-t-xl bg-neutral-50 shadow-[0px_-10px_20px_5px_#0165FF10]"
   >
-    <img
-      src="/src/assets/alter_home.png"
+    <Image
+      src={alter_home}
+      alt="Alter's Home Screen"
       class="rounded-t-md sm:rounded-t-lg border border-neutral-200"
     />
   </div>

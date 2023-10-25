@@ -316,19 +316,19 @@ const jobStatusMap = {
     id: 4,
     text: "In Process",
     color: "red",
-    icon: "/src/assets/in_process_icon.svg",
+    icon: "/in_process_icon.svg",
   },
   PART_RECEIVED: {
     id: 5,
     text: "Part Received",
     color: "orange",
-    icon: "/src/assets/part_received_icon.svg",
+    icon: "/part_received_icon.svg",
   },
   COMPLETE: {
     id: 6,
     text: "Complete",
     color: "green",
-    icon: "/src/assets/complete_icon.svg",
+    icon: "/complete_icon.svg",
   },
   MOVED_TO_OUTWARD: {
     id: 7,

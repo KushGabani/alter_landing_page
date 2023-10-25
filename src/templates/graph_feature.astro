@@ -1,27 +1,33 @@
 ---
 import BaseSection from "../layouts/base_section.astro";
 import { ChallanGraphView } from "../previews/challan_graph_view";
+import { Image } from "astro:assets";
+import graph_view from "../assets/graph_view.png";
+import graph_1 from "../assets/graph_1.svg";
+import graph_2 from "../assets/graph_2.svg";
+import graph_3 from "../assets/graph_3.svg";
+import graph_4 from "../assets/graph_4.svg";
 
 const features = [
   {
-    icon: "/src/assets/graph_1.svg",
+    icon: graph_1,
     title: "Refined production clarity",
     subtitle:
       "Gain comprehensive understanding of all your processes with our visualizations.",
   },
   {
-    icon: "/src/assets/graph_2.svg",
+    icon: graph_2,
     title: "Instant challan insights",
     subtitle:
       "Hover on challans to get quick insights like received and issued items",
   },
   {
-    icon: "/src/assets/graph_3.svg",
+    icon: graph_3,
     title: "Effortless Exploration",
     subtitle: "Seamlessly move through production stages with a simple click.",
   },
   {
-    icon: "/src/assets/graph_4.svg",
+    icon: graph_4,
     title: "Move processes ahead in the flow",
     subtitle: "Create a new challan using the graph to auto-fill forms.",
   },
@@ -35,7 +41,7 @@ const features = [
     <ChallanGraphView client:media="(min-width: 640px)" />
   </div>
   <div class="block sm:hidden w-full lg:w-1/2">
-    <img src="/src/assets/graph_view.png" />
+    <Image src={graph_view} alt="Graph View" />
   </div>
   <div class="w-full lg:w-1/2">
     <div
@@ -55,7 +61,7 @@ const features = [
       {
         features.map((feature) => (
           <div class="flex items-start gap-5 max-w-md">
-            <img src={feature.icon} class="w-8 h-8" />
+            <Image alt={feature.title} src={feature.icon} class="w-8 h-8" />
             <div>
               <h6 class="text-sm md:text-base text-black">{feature.title}</h6>
               <p class="mt-2 text-xs md:text-sm text-slate-500">

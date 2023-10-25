@@ -109,3 +109,115 @@ export const graph_challans = [
     lot: "A",
   }),
 ];
+
+export const receivedItems = [
+  [],
+  [
+    {
+      name: "Red Kali",
+      received: "30 / 30 KALI",
+    },
+    {
+      name: "Rani Kali",
+      received: "30 / 30 KALI",
+    },
+  ],
+  [
+    {
+      name: "Red Kali",
+      received: "30 / 30 KALI",
+    },
+  ],
+  [
+    {
+      name: "Rani Kali",
+      received: "30 / 30 KALI",
+    },
+  ],
+  [
+    {
+      name: "Red Kali",
+      received: "30 / 30 KALI",
+    },
+    {
+      name: "Rani Kali",
+      received: "30 / 30 KALI",
+    },
+  ],
+  [
+    {
+      name: "Red Kali",
+      received: "30 / 30 KALI",
+    },
+  ],
+  [
+    {
+      name: "Rani Kali",
+      received: "15 / 30 KALI",
+    },
+  ],
+  [
+    {
+      name: "Red Kali",
+      received: "0 / 30 KALI",
+    },
+    { name: "Rani Kali", received: "0 / 30 KALI" },
+  ],
+];
+
+export const issuedItems = [
+  [],
+  [],
+  [
+    {
+      name: "Red Kali",
+      tag: "Inward",
+      received: "30 KALI",
+    },
+  ],
+  [
+    {
+      name: "Rani Kali",
+      tag: "Inward",
+      received: "30 KALI",
+    },
+  ],
+  [
+    {
+      name: "Red Kali",
+      tag: "Embroidery",
+      received: "30 KALI",
+    },
+    {
+      name: "Rani Kali",
+      tag: "Embroidery",
+      received: "30 KALI",
+    },
+  ],
+  [
+    {
+      name: "Red Kali",
+      tag: "Diamond",
+      received: "30 KALI",
+    },
+  ],
+  [
+    {
+      name: "Rani Kali",
+      tag: "Diamond",
+      received: "30 KALI",
+    },
+  ],
+  [
+    {
+      name: "Red Kali",
+      tag: "Dhaaga Cutting",
+      received: "30 KALI",
+    },
+    {
+      name: "Rani Kali",
+      tag: "Dhaaga Cutting",
+      received: "15 KALI",
+    },
+  ],
+];
