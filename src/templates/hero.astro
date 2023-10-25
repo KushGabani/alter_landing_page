@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import alter_home from "../assets/alter_home.png";
+import alter_logo from "../assets/alter_logo.png";
 import BaseSection from "../layouts/base_section.astro";
 ---
 
@@ -9,7 +10,7 @@ import BaseSection from "../layouts/base_section.astro";
 >
   <div class="flex flex-col items-center justify-center gap-y-6 px-4">
     <a aria-label="Home" href="#" class="flex items-center gap-x-4">
-      <img src="/src/assets/alter_logo.png" width="45" height="45" />
+      <Image alt="alter logo" src={alter_logo} width="45" height="45" />
     </a>
     <h1
       class="max-w-4xl font-display text-3xl sm:text-6xl font-semibold tracking-tight text-neutral-900"
