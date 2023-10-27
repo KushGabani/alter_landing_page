@@ -2,26 +2,48 @@ import clsx from "clsx";
 import { useState } from "react";
 import { StockPage } from "../previews/stock_page";
 
+// const cards = [
+//   {
+//     title: "Inventory at-a-glance",
+//     description:
+//       "Effortlessly serialize your entire inventory through QR codes and keep tabs on stock at all times",
+//   },
+//   {
+//     title: "Challan made easy",
+//     description:
+//       "Confidently create challans faster than ever before with our smart forms and get the reporting you need",
+//   },
+//   {
+//     title: "Finance and costing",
+//     description:
+//       "Manage bill payments and compute automatic costings of processes, machinery, and employees.",
+//   },
+//   {
+//     title: "Customized control for members",
+//     description:
+//       "Complete Access while maintaining control on who gets to see what with roles & permissions",
+//   },
+// ];
 const cards = [
   {
-    title: "Inventory at-a-glance",
+    title: "Stock & Inventory",
     description:
-      "Effortlessly serialize your entire inventory through QR codes and keep tabs on stock at all times",
+      "Serialize inventory through QR codes and keep tabs on materials as it moves through production pipeline",
   },
   {
-    title: "Challan made easy",
+    title: "Challans And Bills",
     description:
-      "Confidently create challans faster than ever before with our smart forms and get the reporting you need",
+      "Manage inward, outward and jobwork challans. Track payments using purchase, sales and jobwork bills",
   },
   {
-    title: "Finance and costing",
+    title: "Permission & Security",
     description:
-      "Manage bill payments and compute automatic costings of processes, machinery, and employees.",
+      "Give access to everyone while maintaining complete control on who gets to see what",
   },
   {
-    title: "Customized control for members",
+    title: "Finances and Costing",
     description:
-      "Complete Access while maintaining control on who gets to see what with roles & permissions",
+      "Compute costing of machines, processes, employees and have full control of your finances",
   },
 ];
 
@@ -39,7 +61,7 @@ export default function Features() {
         Everything you need to run your production.
       </h2>
       <div className="w-full overflow-hidden flex flex-col xl:flex-row items-center justify-end gap-y-10 xl:gap-0 bg-white/5 xl:bg-transparent rounded-xl border border-white/10 xl:border-none">
-        <div className="w-full sm:w-fit flex flex-row justify-start gap-x-2 overflow-x-scroll p-4 pt-12 pb-4 sm:px-8 xl:px-0 xl:pb-0 sm:gap-x-6 xl:flex-col">
+        <div className="w-full sm:w-fit flex flex-row justify-start gap-x-2 overflow-x-auto p-4 pt-12 pb-4 sm:px-8 xl:px-0 xl:pb-0 sm:gap-x-6 xl:flex-col">
           {cards.map((card, index) => (
             <button
               onClick={() => setActive(index)}

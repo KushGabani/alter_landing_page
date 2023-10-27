@@ -112,11 +112,11 @@ const ChallanGraph = ({ challans }: { challans: ChallanListModel[] }) => {
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
         fitView
-        zoomOnPinch
-        panOnScroll
+        panOnDrag={false}
+        panOnScroll={false}
+        zoomOnScroll={false}
         proOptions={{ hideAttribution: true }}
       >
-        <Controls />
         <Background className="bg-gray-50/20" />
       </ReactFlow>
     </div>

@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import alter_home from "../assets/alter_home.png";
 import alter_logo from "../assets/alter_logo.png";
+import apple_logo from "../assets/apple_logo.svg";
 import BaseSection from "../layouts/base_section.astro";
 ---
 
@@ -40,7 +41,6 @@ import BaseSection from "../layouts/base_section.astro";
         class="group relative inline-flex items-center overflow-hidden rounded-full bg-primary-400 px-8 py-3 text-white focus:outline-none focus:ring hover:bg-primary-500"
         href="https://app.alter-textile.com"
         target="_blank"
-        referrerpolicy="same-origin"
       >
         <span class="absolute -end-full transition-all group-hover:end-4">
           <svg
@@ -59,21 +59,39 @@ import BaseSection from "../layouts/base_section.astro";
         </span>
 
         <span class="font-medium transition-all group-hover:me-4">
-          Try Alter
+          Try Alter Web
         </span>
       </a>
       <a
-        class="group inline-flex ring-1 items-center justify-center rounded-full py-3 px-6 text-sm focus:outline-none ring-neutral-200 text-neutral-700 hover:text-neutral-900 hover:ring-neutral-300 hover:bg-neutral-50 active:bg-neutral-100 active:text-neutral-600 focus-visible:outline-primary-400 focus-visible:ring-neutral-300 transition-colors"
-        href="/"
+        class="relative overflow-hidden group inline-flex ring-1 items-center justify-center rounded-full py-3 px-6 text-sm focus:outline-none ring-neutral-200 text-neutral-700 hover:text-neutral-900 hover:ring-neutral-300 hover:bg-neutral-50 active:bg-neutral-100 active:text-neutral-600 focus-visible:outline-primary-400 focus-visible:ring-neutral-300 transition-colors"
+        href="https://apps.apple.com/ca/app/alter-textile-manufacturing/id6444958683"
+        target="_blank"
       >
-        <svg
-          aria-hidden="true"
-          class="h-3 w-3 flex-none fill-primary-400 group-active:fill-current"
-          ><path
-            d="m9.997 6.91-7.583 3.447A1 1 0 0 1 1 9.447V2.553a1 1 0 0 1 1.414-.91L9.997 5.09c.782.355.782 1.465 0 1.82Z"
-          ></path>
-        </svg>
-        <span class="ml-3">Watch video</span>
+        <span class="absolute -end-full transition-all group-hover:end-4">
+          <svg
+            class="h-5 w-5 rtl:rotate-180"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </span>
+        <div class="flex-start transition-all group-hover:me-4">
+          <Image
+            alt="download on ios"
+            src={apple_logo}
+            width="16"
+            height="16"
+            class={"mb-1"}
+          />
+          <span class="ml-3">Download on iOS</span>
+        </div>
       </a>
     </div>
   </div>

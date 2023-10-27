@@ -4,6 +4,7 @@ import Features from "../templates/features";
 import GraphFeature from "../templates/graph_feature.astro";
 import Hero from "../templates/hero.astro";
 import { StockPage } from "../previews/stock_page";
+import Faq from "../templates/faq.astro";
 ---
 
 <BaseLayout>
@@ -12,5 +13,6 @@ import { StockPage } from "../previews/stock_page";
     <Hero />
     <Features client:idle />
     <GraphFeature />
+    <Faq client:idle />
   </main>
 </BaseLayout>

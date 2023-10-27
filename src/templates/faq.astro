@@ -1,0 +1,64 @@
+---
+import BaseSection from "../layouts/base_section.astro";
+import FaqAccordion from "./faq_accordion.tsx";
+
+type FaqType = {
+  question: string;
+  answer: string;
+};
+
+const faq: FaqType[] = [
+  {
+    question: "How do I start?",
+    answer: `We set up an organization account for you. You create roles and permissions for all employees and factory workers and send invites.`,
+  },
+  {
+    question: "How does it work?",
+    answer: `Factory workers scan the material they work on and perform tasks using modules designed for their work. Inventory data is tracked as the materials move through your production pipeline.`,
+  },
+  {
+    question: "Is worker training required?",
+    answer: `Alter is intuitive and supports multiple languages. It guides factory workers on task at hand and requires no training. Conversely, most manufacturers rely on Alter to train new workers.`,
+  },
+  {
+    question: "How does it solve accounting?",
+    answer: `Since Alter has all operational data, your billing department can create challans and bills with a few taps to track incoming and outgoing payments to vendors and customers. Our customers report massive cost savings and an 85% reduction in accounting workload.`,
+  },
+  {
+    question: "Can I get a demo?",
+    answer: `Yes, we provide an on-site demo. Join Alter to schedule one.`,
+  },
+];
+---
+
+<section
+  id="faq"
+  class="mx-auto w-full overflow-hidden flex flex-col py-20 px-4 sm:px-12 md:px-20 items-start gap-y-8 md:flex-row"
+>
+  <div class="flex flex-col items-start gap-y-4 md:w-1/2">
+    <h1 class="fade-in text-6xl font-medium leading-tight tracking-tight">
+      FAQs
+    </h1>
+  </div>
+  <div class="w-full md:w-1/2">
+    <FaqAccordion faq={faq} client:visible />
+  </div>
+</section>
+
+<!-- <script>
+  import gsap from 'gsap';
+
+  gsap.from('#faq .fade-in', {
+    scrollTrigger: {
+      trigger: '#faq',
+      start: 'top center',
+      end: 'bottom center',
+      markers: false,
+      toggleActions: 'play none none reverse',
+    },
+    y: 10,
+    duration: 0.25,
+    opacity: 0,
+    stagger: 0.1,
+  });
+</script> -->
