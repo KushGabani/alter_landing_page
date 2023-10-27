@@ -1,5 +1,4 @@
 ---
-import BaseSection from "../layouts/base_section.astro";
 import FaqAccordion from "./faq_accordion.tsx";
 
 type FaqType = {
@@ -41,7 +40,7 @@ const faq: FaqType[] = [
     </h1>
   </div>
   <div class="w-full md:w-1/2">
-    <FaqAccordion faq={faq} client:visible />
+    <FaqAccordion faq={faq} client:idle />
   </div>
 </section>
 
