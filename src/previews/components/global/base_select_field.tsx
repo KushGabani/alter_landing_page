@@ -318,7 +318,6 @@ export function BaseSelectField<
               </div>
             </Loading>
             {!isFetching &&
-              (createForm || createItem) &&
               inputRef.current &&
               inputRef.current.value.length > 0 && (
                 <li
@@ -328,8 +327,6 @@ export function BaseSelectField<
                       ? "bg-yellow-500 text-white"
                       : ""
                   }`}
-                  onMouseEnter={() => handleMouseEnter(options.length)}
-                  onMouseLeave={handleMouseLeave}
                 >
                   <span>{`Create a new ${label} "${query}"`}</span>
                   <span>{options.length === highlightedIndex ? " ↵" : ""}</span>
@@ -337,7 +334,6 @@ export function BaseSelectField<
               )}
           </ul>
         )}
-        {createForm ?? <></>}
       </div>
     </>
   );

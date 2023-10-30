@@ -1,6 +1,8 @@
 import clsx from "clsx";
 import { useState } from "react";
 import { StockPage } from "../previews/stock_page";
+import { CreateChallan } from "../previews/create_challan";
+import { ClientCategory, StockCategory } from "../previews/models/types";
 
 // const cards = [
 //   {
@@ -29,21 +31,30 @@ const cards = [
     title: "Stock & Inventory",
     description:
       "Serialize inventory through QR codes and keep tabs on materials as it moves through production pipeline",
+    component: <StockPage />,
   },
   {
     title: "Challans And Bills",
     description:
       "Manage inward, outward and jobwork challans. Track payments using purchase, sales and jobwork bills",
+    component: (
+      <CreateChallan
+        category={new StockCategory("JOBWORK")}
+        clientCategory={[new ClientCategory("JOBWORK_PARTY")]}
+      />
+    ),
   },
   {
     title: "Permission & Security",
     description:
       "Give access to everyone while maintaining complete control on who gets to see what",
+    component: <StockPage />,
   },
   {
     title: "Finances and Costing",
     description:
       "Compute costing of machines, processes, employees and have full control of your finances",
+    component: <StockPage />,
   },
 ];
 
@@ -86,7 +97,7 @@ export default function Features() {
           {cards[active].description}
         </p>
         <div className="xl:w-[60%] rounded-xl xl:rounded-r-none bg-white p-5">
-          <StockPage />
+          {cards[active].component}
         </div>
       </div>
     </section>

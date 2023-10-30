@@ -21,6 +21,7 @@ export const DesignSelector = ({
   error,
 }: Props) => {
   const [designs, setDesigns] = useState(data);
+
   const renderItem = (design: DesignModel, query?: string) => (
     <label
       className="text-start flex-start space-x-2"
@@ -49,8 +50,11 @@ export const DesignSelector = ({
       renderItem={renderItem}
       error={error}
       setSearch={(search) =>
-        search &&
-        setDesigns(designs.filter((design) => design.code.search(search)))
+        setDesigns(
+          data.filter((design) =>
+            design.code.toLowerCase().startsWith(search?.toLowerCase() ?? "")
+          )
+        )
       }
       sanitizeValue={(value) => value.replace(/[^A-Za-z0-9\s]/g, "")}
     />

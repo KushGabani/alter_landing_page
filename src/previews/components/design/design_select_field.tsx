@@ -6,7 +6,7 @@ import {
   type DesignQueryParams,
 } from "../../models/design/design_model";
 import { DesignStatus } from "../../models/types";
-import { Tag, BaseSelectField, BaseDialogForm } from "../global";
+import { Tag, BaseSelectField } from "../global";
 import { designs as data } from "../../data/design";
 import { useState } from "react";
 
@@ -43,6 +43,7 @@ export function DesignSelectField<MultiSelect extends boolean = false>({
   error,
 }: Props<MultiSelect>) {
   const [designs, setDesigns] = useState(data);
+  const [query, setQuery] = useState<string | undefined>(undefined);
   const renderItem = (design: DesignModel, query?: string) => (
     <label
       className="text-start flex-start space-x-2"
@@ -112,7 +113,9 @@ export function DesignSelectField<MultiSelect extends boolean = false>({
         options={designs}
         selected={selected}
         onSelect={onSelect}
+        query={query}
         setQuery={(query: string | undefined) => {
+          setQuery(query);
           setDesigns(
             data.filter((design) => design.code.startsWith(query ?? ""))
           );
