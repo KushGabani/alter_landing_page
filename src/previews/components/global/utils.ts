@@ -73,6 +73,11 @@ export const numberFormatter = (value: string | number) => {
   return num.toLocaleString("en-IN", { maximumFractionDigits: 2 });
 };
 
+export const percentageFormatter = (value: number) =>
+  `${Intl.NumberFormat("us")
+    .format(value * 100)
+    .toString()}%`;
+
 export const parseFormattedNumber = (value?: string): number => {
   if (!value) return 0;
   let str = value.replace(/[^0-9.-]+/g, "");

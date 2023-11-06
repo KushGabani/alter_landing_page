@@ -3,10 +3,9 @@ import { TriggerButton } from "./components/global";
 import { ViewStockTable } from "./components/stock/view_stock_table";
 
 import { StockCategory } from "./models/types";
-import { ChallanIssueTable } from "./components/challan/challan_issue_table";
 import { ChallanExpectationTable } from "./components/challan/challan_expectation_table";
 
-export const StockPage = () => {
+const StockPage = () => {
   const category = new StockCategory("JOBWORK");
   return (
     <div className="h-[90vh] space-y-6">
@@ -25,3 +24,5 @@ export const StockPage = () => {
     </div>
   );
 };
+
+export default StockPage;

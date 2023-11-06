@@ -1,9 +1,19 @@
+---
+import { Image } from "astro:assets";
+import AlterLogo from "../assets/alter_logo.png";
+---
+
 <header class="fixed top-0 w-full py-4 border-b border-slate-200/40">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <nav class="relative z-50 flex justify-between">
       <div class="flex items-center md:gap-x-12">
         <a aria-label="Home" href="#" class="flex items-center gap-x-4">
-          <img src="/src/assets/alter_logo.png" width="45" height="45" />
+          <Image
+            alt="Alter Logo"
+            src="/src/assets/alter_logo.png"
+            width="45"
+            height="45"
+          />
         </a>
         <div class="hidden md:flex md:gap-x-6">
           {

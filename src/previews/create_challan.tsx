@@ -14,7 +14,7 @@ type Props = {
   clientCategory: ClientCategory[];
 };
 
-export const CreateChallan = ({ category, clientCategory }: Props) => {
+const CreateChallan: React.FC<Props> = ({ category, clientCategory }) => {
   const formMethods = useForm<CreateChallanModel>({
     defaultValues: {
       isSubChallan: false,
@@ -35,7 +35,7 @@ export const CreateChallan = ({ category, clientCategory }: Props) => {
     },
   });
 
-  const { handleSubmit, reset, setValue, trigger, control } = formMethods;
+  const { handleSubmit, trigger } = formMethods;
 
   const onSubmit = (data: CreateChallanModel) => {};
 
@@ -109,3 +109,5 @@ const SectionHeading = ({ children }: { children: React.ReactNode }) => {
     </>
   );
 };
+
+export default CreateChallan;

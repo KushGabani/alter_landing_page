@@ -1,11 +1,13 @@
 import React from "react";
 import { type Table, flexRender } from "@tanstack/react-table";
+import clsx from "clsx";
 
 type TableProps<T> = {
   table: Table<T>;
   customHeading?: JSX.Element;
   loading?: boolean;
   showHeading?: boolean;
+  stickyColumn?: boolean;
   cellClassName?: string;
 };
 
@@ -14,6 +16,7 @@ export const TanStackTable = <TData extends object>({
   loading = false,
   customHeading,
   showHeading = true,
+  stickyColumn,
   cellClassName = "py-2 px-8",
 }: TableProps<TData>): React.JSX.Element => {
   return (
@@ -26,10 +29,13 @@ export const TanStackTable = <TData extends object>({
               <thead className="border-b">
                 {table.getHeaderGroups().map((headerGroup) => (
                   <tr key={headerGroup.id}>
-                    {headerGroup.headers.map((header) => (
+                    {headerGroup.headers.map((header, index) => (
                       <th
                         key={header.id}
-                        className="py-3 px-8 text-[0.8rem] first:bg-gray-50 text-center first:text-start text-gray-500 font-normal"
+                        className={clsx(
+                          "py-3 px-8 text-[0.8rem] first:bg-gray-50 text-center first:text-start text-gray-500 font-normal",
+                          index === 0 && stickyColumn && "sticky left-0"
+                        )}
                       >
                         {header.isPlaceholder
                           ? null
@@ -49,11 +55,17 @@ export const TanStackTable = <TData extends object>({
                   key={row.id}
                   className="group cursor-pointer border-b border-neutral-00 bg-white last:border-none text-[0.8rem] hover:bg-gray-50"
                 >
-                  {row.getVisibleCells().map((cell) => {
+                  {row.getVisibleCells().map((cell, index) => {
                     return (
                       <td
                         key={cell.id}
-                        className={`first:bg-white first:group-hover:bg-gray-50 ${cellClassName}`}
+                        className={clsx(
+                          "first:bg-white first:group-hover:bg-gray-50",
+                          cellClassName,
+                          index === 0 &&
+                            stickyColumn &&
+                            "sticky left-0 shadow-[inset_-1px_0px_0px_0_rgb(0_0_0_/_0.05);]"
+                        )}
                       >
                         {flexRender(
                           cell.column.columnDef.cell,
