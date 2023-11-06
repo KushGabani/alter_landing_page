@@ -34,7 +34,7 @@ export const columns = [
 
 const CheckboxComponent = ({ checked }: { checked: boolean }) => {
   return (
-    <div className="flex items-center mb-4">
+    <div className="w-full flex-center my-1">
       <input
         defaultChecked={checked}
         type="checkbox"
